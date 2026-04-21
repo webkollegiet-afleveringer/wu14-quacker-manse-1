@@ -1,0 +1,15 @@
+@use "./variables" as *;
+@use "header.scss";
+@use "main.scss";
+@use "footer.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
