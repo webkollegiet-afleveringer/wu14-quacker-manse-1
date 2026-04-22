@@ -1,5 +1,6 @@
 import React from "react";
 import "../scss/home.scss";
+import { useNavigate } from "react-router-dom";
 import {
   FaRegComment,
   FaRetweet,
@@ -39,7 +40,7 @@ const posts = [
     handle: "@mis_potter",
     time: "14h",
     content:
-      "Kobe’s passing is really sticking w/ me in a way I didn’t expect.\n\nHe was an icon, the kind of person who wouldn’t die this way. My wife compared it to Princess Di’s accident.\n\nBut the end can happen for anyone at any time, & I can’t help but think of anything else lately.",
+      "Kobe’s passing is really sticking w/ me in a way I didn't expect.\n\nHe was an icon, the kind of person who wouldn't die this way. My wife compared it to Princess Di’s accident.\n\nBut the end can happen for anyone at any time, & I can’t help but think of anything else lately.",
     comments: 7,
     retweets: 1,
     likes: 11,
@@ -50,22 +51,18 @@ const posts = [
     name: "Kieron Dotson",
     handle: "@dotson_kieron",
     content:
-    "Kobe's passing is really sticking w/ me in a way i didn’t expect. He was an icon, the kind of person who wouldn’t die this way. My wife compared it to Princess Di’s accident.\n\nBut the end can happen for anyone at any time, & I can’t help but think of anything else lately.",
+      "Kobe's passing is really sticking w/ me in a way i didn’t expect. He was an icon, the kind of person who wouldn’t die this way. My wife compared it to Princess Di’s accident.\n\nBut the end can happen for anyone at any time, & I can’t help but think of anything else lately.",
     comments: 0,
     retweets: 0,
     likes: 0,
-    },
+  },
 ];
 
 const Post = ({ post }) => {
   return (
     <div className="post">
-      {post.likedBy && (
-        <div className="meta"> {post.likedBy}</div>
-      )}
-      {post.retweetedBy && (
-        <div className="meta"> {post.retweetedBy}</div>
-      )}
+      {post.likedBy && <div className="meta">{post.likedBy}</div>}
+      {post.retweetedBy && <div className="meta">{post.retweetedBy}</div>}
 
       <div className="post-header">
         <span className="name">{post.name}</span>
@@ -86,16 +83,25 @@ const Post = ({ post }) => {
         <span><FaUpload /></span>
       </div>
 
-      {post.thread && (
-        <div className="thread">Show this thread</div>
-      )}
+      {post.thread && <div className="thread">Show this thread</div>}
     </div>
   );
 };
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home">
+
+      {/* LOGIN KNAP */}
+      <button
+        className="login-btn"
+        onClick={() => navigate("/login")}
+      >
+        Login
+      </button>
+
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
