@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Search from "./components/Search";
 import Notifications from "./components/Notifications";
 import Messages from "./components/Messages";
+import Profile from "./components/Profile";
 
 import "./scss/style.scss";
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/search" element={<Search />} />
       <Route path="/notifications" element={<Notifications />} />
       <Route path="/messages" element={<Messages />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   </BrowserRouter>,
 );
