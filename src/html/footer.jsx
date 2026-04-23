@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="footer">
       <nav className="footer__nav">
         <ul className="footer__nav__list">
-          <NavLink>
-            <li className="footer__nav__list__item">
+          <li className="footer__nav__list__item">
+            <NavLink to="/">
               <svg
                 width="23"
                 height="21"
@@ -27,10 +27,10 @@ export default function Footer() {
                   fill="#687684"
                 />
               </svg>
-            </li>
-          </NavLink>
-          <NavLink>
-            <li className="footer__nav__list__item">
+            </NavLink>
+          </li>
+          <li className="footer__nav__list__item">
+            <NavLink to="/search">
               <svg
                 width="20"
                 height="20"
@@ -45,10 +45,10 @@ export default function Footer() {
                   fill="#687684"
                 />
               </svg>
-            </li>
-          </NavLink>
-          <NavLink>
-            <li className="footer__nav__list__item">
+            </NavLink>
+          </li>
+          <li className="footer__nav__list__item">
+            <NavLink to="/notifications">
               <svg
                 width="20"
                 height="20"
@@ -63,10 +63,10 @@ export default function Footer() {
                   fill="#687684"
                 />
               </svg>
-            </li>
-          </NavLink>
-          <NavLink>
-            <li className="footer__nav__list__item">
+            </NavLink>
+          </li>
+          <li className="footer__nav__list__item">
+            <NavLink to="/messages">
               <svg
                 width="20"
                 height="18"
@@ -81,8 +81,8 @@ export default function Footer() {
                   fill="#687684"
                 />
               </svg>
-            </li>
-          </NavLink>
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </footer>

@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import App from "./app";
-import Home from "./components/Home";
 import Login from "./components/Login";
+import Search from "./components/Search";
+import Notifications from "./components/Notifications";
+import Messages from "./components/Messages";
 
 import "./scss/style.scss";
 
@@ -14,8 +16,10 @@ ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/search" element={<Search />} />
+      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/messages" element={<Messages />} />
     </Routes>
   </BrowserRouter>,
 );
